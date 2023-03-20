@@ -3,11 +3,16 @@
 import { store } from "./store";
 import { Provider } from "react-redux";
 import { ADD_COUNTER } from "./counterActionType";
+import { DATA_SET } from "./dataList/dataListActionType";
 
-export function Providers({ children }: { children: React.ReactNode }) {
+
+
+export function Providers({ children, data }: { children: React.ReactNode, data: any }) {
+
+
   store.dispatch({
-    type: ADD_COUNTER,
-    payload: ADD_COUNTER,
+    type: DATA_SET,
+    payload: data,
   });
   return <Provider store={store}>{children}</Provider>;
 }

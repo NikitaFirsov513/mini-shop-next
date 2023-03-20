@@ -7,6 +7,7 @@ import {
 } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import { Provider } from "react-redux";
+import dataListReducer from "./dataList/dataListReducer";
 
 export interface ICounterState {
   count: number;
@@ -24,5 +25,6 @@ export const counterReducer = createReducer(initialState, (builder) => {
 
 export const rootReducer = combineReducers({
   counter: counterReducer,
+  dataList: dataListReducer
 });
 
