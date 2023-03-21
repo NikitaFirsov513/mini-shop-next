@@ -6,6 +6,7 @@
 }
 
 .home {
+  padding-bottom: 20px;
   font-family: "Rubik";
 
   width: 100%;
@@ -72,6 +73,8 @@
       color: #232321;
     }
     & button {
+      transition: all 0.1s;
+      cursor: pointer;
       margin-top: 16px;
       width: 100%;
       padding: 15.5px 0;

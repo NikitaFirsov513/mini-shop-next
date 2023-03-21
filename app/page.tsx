@@ -6,27 +6,18 @@ import { ADD_COUNTER } from "@/redux/counterActionType";
 import "../style/styles.scss";
 import { Header } from "./header";
 import { DataListComponent } from "./dataListComponent";
+import { useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const count = useAppSelector((state) => state.counter.count);
-  const data = useAppSelector((state) => state.dataList.data);
-  //console.log(data)
-  const dispatch = useAppDispatch();
-
-  const addAction = () => {
-    dispatch({
-      type: ADD_COUNTER,
-      payload: ADD_COUNTER,
-    });
-  };
+  const [filter, setFilter] = useState("");
 
   return (
     <div className="home">
       <div className="home__wrapper">
-        <Header />
-        <DataListComponent />
+        <Header filter={filter} setFilter={setFilter} />
+        <DataListComponent filter={filter} />
       </div>
     </div>
   );
