@@ -1,6 +1,5 @@
 import { Providers } from "@/redux/provider";
 import { data } from "@/types/data";
-//import "./globals.css";
 
 async function getData() {
 

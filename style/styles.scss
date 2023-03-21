@@ -44,6 +44,7 @@
     }
   }
   &__data {
+    justify-content: center;
     display: flex;
     gap: 38px 40px;
     flex-wrap: wrap;
@@ -109,6 +110,108 @@
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+  }
+  &__card {
+    cursor: pointer;
+    background-color: #ffa52f;
+    top: 87vh;
+    left: 92vw;
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+  }
+  &__window {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    z-index: 20;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+    &-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 48px;
+      padding: 24px 24px 38px 34px;
+      width: 546px;
+      background-color: #fafafa;
+      min-height: 200px;
+      border-radius: 16px;
+    }
+    &-head {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      & h1 {
+        width: 546px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 38px;
+        /* identical to box height */
+
+        /* Dark Gray */
+
+        color: #232321;
+      }
+      & p {
+        width: 546px;
+        margin-top: 8px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        /* identical to box height */
+
+        /* Dark Gray */
+      }
+    }
+    &-elem {
+      display: flex;
+      width: 546px;
+      gap: 24px;
+    }
+    &-right {
+      height: 72px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 16px;
+      & h3 {
+        width: 325px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 28px;
+
+        /* Dark Gray */
+
+        color: #232321;
+      }
+      & p {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 28px;
+
+        /* Blue */
+
+        color: #4a69e2;
+      }
+      & button {
+        cursor: pointer;
+        background: none;
+        border: none;
+      }
     }
   }
 }
