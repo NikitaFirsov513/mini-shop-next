@@ -2,7 +2,6 @@
 
 import { store } from "./store";
 import { Provider } from "react-redux";
-import { ADD_COUNTER } from "./counterActionType";
 import { DATA_SET } from "./dataList/dataListActionType";
 
 export function Providers({
